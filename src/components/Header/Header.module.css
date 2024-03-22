@@ -1,0 +1,75 @@
+/* Header.module.css */
+
+.header {
+    position: relative;
+    height: 4rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 50rem;
+}
+
+.imdb_logo {
+    height: 2.2rem;
+}
+
+.menu_icon {
+    height: 2.2rem;
+    cursor: pointer; /* Додано курсор, щоб підказати на можливість кліку */
+}
+
+.menu {
+    position: absolute;
+    top: calc(100% + 10px); /* Розташовує випадаючий список під іконкою меню з відступом 10px */
+    left: 0;
+    padding: 10px;
+    z-index: 999; /* Забезпечує, що випадаючий список буде поверх інших елементів */
+    color: black;
+    visibility: hidden; /* По замовчуванню список прихований */
+    opacity: 0; /* По замовчуванню список непрозорий */
+    transition: visibility 0s, opacity 0.5s linear; /* Анімація для відображення / приховування */
+}
+
+.menu.active {
+    visibility: visible; /* Показуємо список, коли він активний */
+    opacity: 1; /* Делаем список непрозорим */
+}
+
+.menu_block{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: larger;
+}
+
+.search_block {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.search_input {
+    width: 20rem;
+    border-bottom-left-radius: 0.4rem;
+    border-top-left-radius: 0.4rem;
+    border: none;
+    outline: none;
+    padding: 8px;
+    font-size: 16px;
+}
+
+.search_icon {
+    width: 0.8rem;
+    cursor: pointer;
+    color: black;
+}
+
+.search_button {
+    background: white;
+    border-bottom-right-radius: 0.4rem;
+    border-top-right-radius: 0.4rem;
+    border-color: white;
+    cursor: pointer;
+    padding: 9px;
+}
