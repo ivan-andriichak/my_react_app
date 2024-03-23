@@ -1,0 +1,10 @@
+.genres_content {
+}
+
+.genres_content button{
+    position: absolute;
+    top: 70px;
+    left: 100px;
+    z-index: 999;
+    background-color: #f3ce13;
+}

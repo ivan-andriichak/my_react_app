@@ -1,4 +1,3 @@
-/* Header.module.css */
 
 .header {
     position: relative;
@@ -7,69 +6,141 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 50rem;
+    max-width: 65rem;
 }
 
 .imdb_logo {
     height: 2.2rem;
+    cursor: pointer;
+    box-shadow: inset -2px -2px 3px rgba(243, 206, 19),
+    inset 2px 2px 3px rgb(196, 171, 4);
+    border-radius: 0.4rem;
+    margin-top: 8px;
+    background-image: linear-gradient(
+            to top left,
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.2) 30%,
+            rgba(0, 0, 0, 0)
+    )
+}
+
+.imdb_logo:active {
+    box-shadow: inset 2px 2px 3px rgb(243, 206, 1),
+    inset -2px -2px 3px rgb(217, 183, 0);
+}
+
+.menu_block {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: larger;
 }
 
 .menu_icon {
     height: 2.2rem;
-    cursor: pointer; /* Додано курсор, щоб підказати на можливість кліку */
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+    border-radius: 0.4rem;
+}
+
+.menu_icon:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6),
+    inset 2px 2px 3px rgba(0, 0, 0, 0.6);
 }
 
 .menu {
     position: absolute;
-    top: calc(100% + 10px); /* Розташовує випадаючий список під іконкою меню з відступом 10px */
+    top: calc(100%);
     left: 0;
     padding: 10px;
-    z-index: 999; /* Забезпечує, що випадаючий список буде поверх інших елементів */
-    color: black;
-    visibility: hidden; /* По замовчуванню список прихований */
-    opacity: 0; /* По замовчуванню список непрозорий */
-    transition: visibility 0s, opacity 0.5s linear; /* Анімація для відображення / приховування */
+    z-index: 999;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+    background-color: white;
+    border-radius: 0.2rem;
+
 }
 
 .menu.active {
-    visibility: visible; /* Показуємо список, коли він активний */
-    opacity: 1; /* Делаем список непрозорим */
-}
-
-.menu_block{
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    font-size: larger;
+    visibility: visible;
+    opacity: 1;
 }
 
 .search_block {
     display: flex;
     align-items: stretch;
-    justify-content: center;
+    height: 2.2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+    border-radius: 0.4rem;
 }
 
 .search_input {
-    width: 20rem;
+    width: 28rem;
     border-bottom-left-radius: 0.4rem;
     border-top-left-radius: 0.4rem;
+
     border: none;
     outline: none;
     padding: 8px;
-    font-size: 16px;
+    font-size: 1.1rem;
 }
 
-.search_icon {
-    width: 0.8rem;
+.clear_button {
+    background: white;
+    padding: 8px 6px 6px 6px;
+    position: relative;
     cursor: pointer;
-    color: black;
+
+}
+
+.clear_button::after {
+    content: '';
+    position: absolute;
+    top: 20%;
+    right: 0;
+    height: 60%;
+    width: 1px;
+    background: grey;
+}
+
+
+.clear_button img {
+    width: 1.3rem;
 }
 
 .search_button {
+    padding: 10px;
     background: white;
     border-bottom-right-radius: 0.4rem;
     border-top-right-radius: 0.4rem;
-    border-color: white;
     cursor: pointer;
-    padding: 9px;
 }
+
+.search_icon {
+    width: 1.1rem;
+    cursor: pointer;
+}
+
+.styled:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6),
+    inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+
+.logo_register {
+    margin-left: 120px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-top: 8px;
+}
+
+.logo_register span {
+    cursor: pointer;
+}
+
+.user_icon {
+    width: 1.8rem;
+    border-radius: 50%;
+}
+
