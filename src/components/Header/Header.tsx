@@ -11,7 +11,6 @@ import user_icon from '../../images/PNG/user_icon.png';
 import {Genres} from "../Genres";
 
 
-
 const Header: FC = () => {
     const [menuOpen, setMenuOpen] = useState<boolean>(false);
     const menuIconRef = useRef<HTMLImageElement>(null);
